@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe-Grind</title>
+    <link rel="stylesheet" href="css/aboutUs.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/sci-fi/48/cafe.png" type="image/x-icon">
+    <!-- js link -->
+    <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Import your fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-----------------------Navbar------------------------------------------------->
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="index.html">Cafe-Grind </a>></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutUs.html">About</a></li>
+                <li>
+                    <a href="#" class="desktop-item">Cafe</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+                    <ul class="drop-menu">
+                        <li><a href="caapucino.html">Caapucino Blast</a></li>
+                        <li><a href="marksmen.html">MarksMen</a></li>
+                        <li><a href="barkaas.html"> Barkaas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="desktop-item"> Multimedia</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Mega Menu</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="img/logo1.gif" alt=" Logo">
+                            </div>
+                            <div class="row">
+                                <header>News</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">News Releases</a></li>
+                                    <li><a href="#">Recently Published</a></li>
+                                    <li><a href="#">Podcasts</a></li>
+                                    <li><a href="#">Blogs</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Events</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Social Media </a></li>
+                                    <li><a href="#">Media Resources</a></li>
+                                    <li><a href="#">Upcoming Launches & Landing </a></li>
+                                    <li><a href="#">Virtual Gust </a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Programmes</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Space on wheel</a></li>
+                                    <li><a href="#">Students satellite</a></li>
+                                    <li><a href="#">Technology Tranfer </a></li>
+                                    <li><a href="#">Space Tutor</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+    <!-----------------------Hero Section ------------------------------------------------->
+    <div class="hero">
+        About Us
+    </div>
+    <!-----------------------About Us sub header ------------------------------------------------->
+    <section class="about-us scroll-fade" id="about">
+        <div class="about-content">
+            We are four passionate students from <strong>[Era University]</strong>, united by our love for good food,
+            great coffee, and meaningful conversations.
+            Our journey began over countless study sessions and café-hopping adventures, where we realized the joy of
+            discovering new spots that matched our moods and cravings.
+            This shared experience sparked the idea for our project: a centralized platform to help others find the
+            perfect café based on cuisine and ambiance.
+            We believe that a café is more than just a place to eat or grab a drink—it's a space to connect, unwind, and
+            create memories.
+            Through our platform, we aim to make the search for that ideal spot easier, more personalized, and more
+            enjoyable.
+            With curated recommendations, real user reviews, and mood-based filters, we're building a community for all
+            café lovers.
+            Whether you're looking for a quiet nook to study, a lively place to catch up with friends, or a romantic
+            setting for a date, our platform is here to guide you.
+        </div>
+    </section>
+
+    <script>
+        // Scroll animation reveal
+        const scrollFade = document.querySelectorAll('.scroll-fade');
+
+        const revealOnScroll = () => {
+            scrollFade.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                const winHeight = window.innerHeight;
+
+                if (top < winHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+
+    <section class="mission-section fade-in" id="mission">
+        <!-- Bubbles -->
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+
+        <!-- Content -->
+        <h2>Our Mission</h2>
+        <p>
+            To create a user-friendly website that curates and categorizes cafés, making it easier for individuals to
+            find the ideal spot for any occasion—be it a quiet study session, a lively hangout, or a romantic date. We
+            aim to bridge the gap between café enthusiasts and the diverse culinary experiences our city has to offer.
+        </p>
+    </section>
+
+    <!-- Intersection Observer for Scroll Animation -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+    <!-----------------------why we bulit  ------------------------------------------------->
+    <section class="why-we-built-this">
+        <div class="background-animation">
+            <div class="blob"></div>
+            <div class="blob"></div>
+        </div>
+        <div class="content-container">
+            <h2>Why We Built This</h2>
+            <p>
+                We recognized the challenge many face in choosing the right café that suits their mood and taste
+                preferences.
+                Our combined skills and shared passion led us to develop this platform, aiming to simplify the
+                decision-making
+                process and enhance the café-going experience for others.
+            </p>
+        </div>
+    </section>
+
+    <!-------------------------Join Us-------------------------->
+    <section class="join-us">
+        <div class="bg-animated">
+            <div class="blob blob1"></div>
+            <div class="blob blob2"></div>
+        </div>
+        <div class="join-content">
+            <h1>Join Us on This Journey</h1>
+            <p>
+                As we continue to grow and refine our website, we invite you to explore, discover, and share your
+                favorite cafés.
+                Together, let's build a community that celebrates the rich tapestry of café culture.
+            </p>
+        </div>
+    </section>
+
+
+    <!-----------------------Java Script------------------------------------------------->
+    <script>
+        document.addEventListener('mousemove', function (e) {
+            let body = document.querySelector('body');
+            let circle = document.createElement('span');
+            let x = e.offsetX;
+            let y = e.offsetY;
+            circle.style.left = x + "px";
+            circle.style.top = y + "px";
+            let size = Math.random() * 100;
+            circle.style.width = 20 + size + "px";
+            circle.style.height = 20 + size + "px";
+            body.appendChild(circle);
+            setTimeout(function () {
+                circle.remove();
+            }, 1800);
+        });
+    </script>
+</body>
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>Grind Café</h2>
+            <p>Brewing moments, one cup at a time.</p>
+        </div>
+        <div class="footer-contact">
+            <p><strong>Address:</strong> Street 238, Downtown City</p>
+            <p><strong>Phone:</strong> +1 800 555 6789</p>
+            <p><strong>Email:</strong> <a href="mailto:contact@grindcafe.com">contact@grindcafe.com</a></p>
+            <p><strong>Website:</strong> <a href="#">www.grindcafe.com</a></p>
+            <div class="button">Get in Touch</div>
+        </div>
+        <div class="footer-social">
+            <p><strong>Follow us:</strong></p>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        All copyrights belong to their respective owners. If any content owner has an issue with material presented
+        here, please contact us for removal <br>
+        &copy; 2025 Grind Café. All Rights Reserved. Designed by Fusion Force Team.
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks-Men</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/marksmenContact.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="img/marks-men logo.png" alt="Marks-Men  Logo">
+        </div>
+
+        <!-- Navigation -->
+        <ul>
+            <li><a href="marksmen.html" class="active">HOME</a></li>
+            <li><a href="marksAbout.html">ABOUT</a></li>
+            <li><a href="marksMenu.html">OUR MENU</a></li>
+            <li><a href="#">EVENTS</a></li>
+            <li><a href="marksContact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <!-- Hero Section -->
+    <div>
+        <section class="hero1">
+            <div class="hero-content1">
+                <h1>Contact Us</h1>
+            </div>
+        </section>
+        <!------------------------------sub head------------------------->
+        <section class="contact-section" id="contact">
+            <ul class="bubbles">
+                <!-- 10 animated bubbles -->
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+            </ul>
+            <div class="contact-container">
+                <h2>Contact <span>Marksmen Café</span></h2>
+                <p>We'd love to hear from you. Drop a message below.</p>
+
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+        <!-- End of Contact Section -->
+        <section class="location-section" id="location">
+            <ul class="bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <div class="location-container">
+                <h2>Our <span>Location</span></h2>
+                <p>Find Marksmen Café at the heart of the city</p>
+
+                <div class="map-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.6729373748067!2d80.93834587489293!3d26.850353062768686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfda7a9a8b815%3A0xeadb6f19da30c3!2sMarksmen!5e0!3m2!1sen!2sin!4v1746536376905!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </section>
+</div>
+        <script src="script.js">
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert("Thanks for reaching out to Marksmen Café!");
+                this.reset();
+            });
+
+        </script>
+        </body>
+          <!-------------------------------footer section----------------------------->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>C-37 C Block, 1st floor Radial Rd 5<br>
+                    Connaught Place New Delhi, 110001</p>
+                <p><span class="call-label">Call -</span> 9999611334</p>
+            </div>
+
+            <div class="footer-section newsletter">
+                <img src="img/marks-men logo.png " alt="Openhouse Cafe Logo" class="logo" />
+                <p>Join our mailing list for updates,<br>Get news & offers events.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-section timing">
+                <h3>Timing</h3>
+                <p><strong>Mon – Fri:</strong> 11am - 1am</p>
+                <p><strong>Sat - Sun:</strong> 11am - 1am</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © 2024 Openhouse-Cafe | All Rights Reserved</p>
+            <div>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+        </html>

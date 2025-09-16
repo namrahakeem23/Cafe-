@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('/cur1.png'), auto;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+
+
+
+/* Full height hero section */
+.hero {
+    height: 50vh;
+    background: url('https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/v1692878172/23ddad5524a6f0ee90c2e0fdca70150a.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Overlay for better contrast */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    font-weight: 300;
+    color: wheat;
+    margin: 10px 0;
+}
+
+.hero-content h1 span {
+    font-weight: 400;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #c4915c;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #a37445;
+}
+
+/* Navbar styles  */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(238, 178, 88);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbar .logo img {
+    height: 50px;
+    /* reduced logo height */
+}
+
+/* ----------------------------------Our Menu----------------------------------  */
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.menu-column {
+    width: 100%;
+    max-width: 420px;
+    flex: 1;
+}
+
+.menu-column h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.menu-column h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #c27c39;
+    margin: 10px auto 0;
+}
+
+.menu-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.menu-item h4 {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 5px;
+}
+
+.menu-item span {
+    font-weight: normal;
+    color: #666;
+}
+
+.menu-item p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/*----------------------------------------Footer ----------------------------------*/
+.footer-section {
+    margin-top: 50px;
+    background: url('https://i.pinimg.com/736x/34/3a/46/343a46605c70f73889970d5011e2f536.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.footer-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    /* dark overlay for contrast */
+    padding: 80px 20px 60px;
+}
+
+.footer-content .tagline {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ddd;
+    letter-spacing: 1px;
+}
+
+.footer-content h2 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-content .subtext {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-bottom {
+    background-color: #000;
+    color: white;
+    padding: 30px 20px;
+}
+
+
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 14px;
+}

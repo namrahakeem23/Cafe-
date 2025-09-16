@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('/cur1.png'), auto;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+
+
+
+/* Full height hero section */
+.hero {
+    height: 50vh;
+    background: url('https://files.yappe.in/place/full/cappuccino-blast-mall-avenue-35632.webp') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Overlay for better contrast */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    font-weight: 300;
+    color: wheat;
+    margin: 10px 0;
+}
+
+.hero-content h1 span {
+    font-weight: 400;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #c4915c;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #a37445;
+}
+
+/* Navbar styles  */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(238, 178, 88);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.navbar .logo img {
+    height: 50px;
+    /* reduced logo height */
+}
+
+/* Our Host css */
+
+.host-section {
+    padding: 60px 30px;
+}
+
+.host-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.host-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.subheading {
+    color: #b0824f;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.host-text p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.story-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 50% / 10%;
+    /* Arch-like shape */
+    object-fit: cover;
+}
+
+/*-----------------------Contact css-------------------------------------*/
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: lightpink;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: skyblue;
+}
+
+.map-frame {
+    flex: 1;
+    min-height: 200px;
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 70%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .map-frame {
+        min-height: 300px;
+    }
+}
+
+/*----------------------------------------Footer ----------------------------------*/
+.footer-section {
+    margin-top: 50px;
+    background: url('https://i.pinimg.com/736x/34/3a/46/343a46605c70f73889970d5011e2f536.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.footer-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    /* dark overlay for contrast */
+    padding: 80px 20px 60px;
+}
+
+.footer-content .tagline {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ddd;
+    letter-spacing: 1px;
+}
+
+.footer-content h2 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-content .subtext {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-bottom {
+    background-color: #000;
+    color: white;
+    padding: 30px 20px;
+}
+
+
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 14px;
+}
